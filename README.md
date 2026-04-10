@@ -1,17 +1,37 @@
-# universities_app
+#Universities App
+## Stack
+ 
+| Tecnología | Uso |
+|---|---|
+| Flutter + Dart | Framework principal |
+| Provider | Manejo de estado |
+| http | Network requests |
+| image_picker | Selección de imágenes |
 
-A new Flutter project.
+##Arquitectura 
+El proyecto sigue el patrón **MVVM** (Model - View - ViewModel):
+ 
+```
+lib/
+├── main.dart
+├── models/
+│   └── university.dart
+├── services/
+│   └── university_service.dart
+├── viewmodels/
+│   └── university_viewmodel.dart
+└── views/
+    ├── list/
+    │   └── university_list_screen.dart
+    └── detail/
+        └── university_detail_screen.dart
+```
+##Correr proyecto
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+# Instalar dependencias
+flutter pub get
+ 
+# Correr la app
+flutter run
+```
